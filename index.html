@@ -10,7 +10,13 @@
 </head>
 <body>
     <h3>SameSite=none</h3>
-    <form method="post" action="/login" method="POST">
+    <form
+        name="samesite-none"
+        action="/login"
+        method="POST"
+        data-netlify=true
+        enctype="application/x-www-form-urlencoded"
+    >
         <button id='loginBtn' type="submit">Login</button>
     </form>
 
