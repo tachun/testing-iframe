@@ -21,19 +21,19 @@ app.post("/", (req,res) =>{
 app.post("/login", (req, res) => {
     const cookie = "user=JeanLuc; samesite=none; secure";
     res.setHeader("set-cookie", [cookie])
-    res.send("ok")
+    res.redirect('/');
 })
 
 app.post("/login-lax", (req, res) => {
     const cookie = "user=JeanLuc; samesite=lax;";
     res.setHeader("set-cookie", [cookie])
-    res.send("ok")
+    res.redirect('/lax');
 })
 
 app.post("/login-strict", (req, res) => {
     const cookie = "user=JeanLuc; samesite=strict;";
     res.setHeader("set-cookie", [cookie])
-    res.send("ok")
+    res.redirect('/strict');
 })
 
 app.get("/", (req, res) => {

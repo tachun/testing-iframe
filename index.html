@@ -10,21 +10,22 @@
 </head>
 <body>
     <h3>SameSite=none</h3>
-
-    <button id='loginBtn'>Login</button>
+    <form method="post" action="/login" method="POST">
+        <button id='loginBtn' type="submit">Login</button>
+    </form>
 
     <img src='/img'>
 
     <script>
-        const loginBtn = document.getElementById("loginBtn");
+        // const loginBtn = document.getElementById("loginBtn");
 
         if (document.cookie) {
             loginBtn.style.display = "none";
         }
 
-        loginBtn.addEventListener("click", e => {
-            fetch("/login", {"method":"POST"}).then(a=>a.text()).then(console.log)
-        })
+        // loginBtn.addEventListener("click", e => {
+        //     fetch("/login", {"method":"POST"}).then(a=>a.text()).then(console.log)
+        // })
     </script>
 </body>
 </html>
