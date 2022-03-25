@@ -9,7 +9,7 @@
     </style>
 </head>
 <body>
-    <h3>SameSite=none</h3>
+    <h3>SameSite=lax</h3>
 
     <button id='loginBtn'>Login</button>
 
@@ -23,7 +23,7 @@
         }
 
         loginBtn.addEventListener("click", e => {
-            fetch("/login", {"method":"POST"}).then(a=>a.text()).then(console.log)
+            fetch("/login-lax", {"method":"POST"}).then(a=>a.text()).then(console.log)
         })
     </script>
 </body>
